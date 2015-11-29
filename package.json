@@ -1,0 +1,31 @@
+{
+  "name": "eta_prime_weekend_03",
+  "version": "1.0.0",
+  "description": "Welcome to templates and express generator! In this challenge you will be creating a meme server that renders HTML using Jade templates. In addition, you will be able to add comments to the images and save them so that they’re there next time you open the window!",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js",
+    "start": "node ./bin/www"
+  },
+    "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckroening/eta_prime_weekend_03.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckroening/eta_prime_weekend_03/issues"
+  },
+  "homepage": "https://github.com/ckroening/eta_prime_weekend_03#readme"
+}
