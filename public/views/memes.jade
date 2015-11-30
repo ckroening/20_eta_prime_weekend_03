@@ -1,3 +1,16 @@
 extends layout
 
 block content
+
+	for elem in memes
+		div(id="#{elem.id}")
+			a(href="/memes/#{elem.id}")
+				img(src="#{elem.url}")
+			<br>
+			form(class="#{elem.id}")
+				input(type="text" name="message" required placeholder="Your interpretation here...")
+				input(type="submit")
+			<br>
+			
+
+			extends layout
