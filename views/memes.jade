@@ -1,7 +1,8 @@
 extends layout
 
 block content
-
+	script(id="template" type="text/x-handlebars-template")
+		include template.html
 	for elem in memes
 		div(id="#{elem.id}")
 			a(href="/memes/#{elem.id}")
