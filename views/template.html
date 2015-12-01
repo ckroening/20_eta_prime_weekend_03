@@ -1,1 +1,12 @@
-Hello {{firstName}}
+{{#each memes}}
+	<div>
+		<a href="{{url}}"></a>
+			<img src="{{url}}" />
+		<br>
+		<form>
+			<input type="text" name="message" required placeholder="Your interpretation here...">
+			<input type="submit">
+		</form>
+		<br>
+	</div>
+{{/each}}

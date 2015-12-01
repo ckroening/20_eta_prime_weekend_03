@@ -1,6 +1,6 @@
 var source = $("#template").html(); 
 var template = Handlebars.compile(source); 
 var data = { 
-  firstName: "Bob"
+  memes: memes
 }; 
 $('body').append(template(data));

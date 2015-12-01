@@ -1,14 +1,7 @@
 extends layout
 
 block content
+	script.
+		var memes = !{JSON.stringify(memes)};
 	script(id="template" type="text/x-handlebars-template")
 		include template.html
-	for elem in memes
-		div(id="#{elem.id}")
-			a(href="/memes/#{elem.id}")
-				img(src="#{elem.url}")
-			<br>
-			form(class="#{elem.id}")
-				input(type="text" name="message" required placeholder="Your interpretation here...")
-				input(type="submit")
-			<br>
