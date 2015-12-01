@@ -1,1 +1,6 @@
-//script for rendered page, includes comment form.
+var source = $("#template").html(); 
+var template = Handlebars.compile(source); 
+var data = { 
+  firstName: "Bob"
+}; 
+$('body').append(template(data));
