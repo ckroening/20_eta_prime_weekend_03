@@ -1,4 +1,4 @@
-{{#each memes}}
+{{#each memeInfo}}
 	<div>
 		<a href="{{url}}"></a>
 			<img src="{{url}}" />
@@ -7,6 +7,10 @@
 			<input type="text" name="message" required placeholder="Your interpretation here...">
 			<input type="submit">
 		</form>
+		<br>
+		{{#each comments}}
+		  	<p>{{message}}</p>
+		{{/each}}
 		<br>
 	</div>
 {{/each}}
