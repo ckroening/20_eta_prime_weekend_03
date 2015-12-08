@@ -5,7 +5,6 @@ var getCommentsForMeme = function(meme, comments) {
   var result = [];
   for (var i = 0; i < comments.length; i++) {
     if (comments[i].imageId === meme.imageId) {
-      console.log('meme ' + meme.url + ': ' + comments[i].message)
       result.push(comments[i]);
     }
   }
@@ -23,11 +22,11 @@ var render = function(memes, comments) {
   var data = { 
     memeInfo: getMemeInfo(memes, comments)
   };
-  $('#main').html(template(data));
+  $('body').append(template(data));
 };
 
-var addComment = function (event, imageId) {
-  event.preventDefault();
+var addComment = function (imageId) {
+  //event.preventDefault();
   var comment = {
     message: $('#comment' + imageId).val(),
     imageId: imageId
@@ -43,13 +42,10 @@ var addComment = function (event, imageId) {
   });
 };
 
-var comments;
-
 $.ajax({
       url: '/comments'
     })
-    .done(function(newComments) {
-      comments = newComments;
+    .done(function(comments) {
       render(memes, comments)
     });
 
